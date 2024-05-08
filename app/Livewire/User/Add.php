@@ -25,8 +25,8 @@ class Add extends Component
     ];
 
     public function mount(){
-        if (!(auth()->user()->role == 'Admin')) {
-            abort(403, 'Kamu bukan Admin!');
+        if (!(auth()->user()->role == 'Admin' || auth()->user()->role == 'Pengurus Desa')) {
+            abort(403, 'Kamu bukan Admin atau Pengurus Desa!');
         }
     }
 
@@ -50,3 +50,4 @@ class Add extends Component
         return view('livewire.user.add');
     }
 }
+
