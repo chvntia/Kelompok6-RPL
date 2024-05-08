@@ -26,6 +26,16 @@
                         {{ __('Approval User') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('berita.add') }}" :active="request()->routeIs('berita.add')">
+                        {{ __('Add Berita') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('berita.approval') }}" :active="request()->routeIs('berita.approval')">
+                        {{ __('Approval Berita') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
