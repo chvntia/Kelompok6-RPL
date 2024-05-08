@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Desa Wisata Asri</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,28 +18,29 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+    <div class="flex h-screen" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+        @include('layouts.navigation')
+        <div class="flex flex-col flex-1 w-full">
+            @include('layouts.top-menu')
+            <main class="h-full overflow-y-auto">
+                <div class="container px-6 mx-auto grid">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    @if (isset($header))
+                    <h2 class="my-6 text-xl font-semibold text-gray-700">
                         {{ $header }}
-                    </div>
-                </header>
-            @endif
+                    </h2>
+                    @endif
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
+                    {{ $slot }}
+
+
             </main>
         </div>
-
+    </div>
+        <x-banner />
         @stack('modals')
-
         @livewireScripts
     </body>
 </html>
