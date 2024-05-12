@@ -8,6 +8,10 @@
             </div>
             <div class="flex-col items-center text-sm gap-12 text-sm font-semibold text-lime-800 md:flex md:flex-row lg:p-0 md:mt-0">
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="/">Beranda</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#profile_desa">Profile Desa</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#lokasi">Lokasi</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#fasilitas">Fasilitas</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#kontak">Kontak</a>
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Profile Desa</a>
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="{{route('berita.show')}}">Berita</a>
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Kegiatan</a>
