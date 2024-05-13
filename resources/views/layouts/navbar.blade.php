@@ -12,15 +12,6 @@
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#lokasi">Lokasi</a>
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#fasilitas">Fasilitas</a>
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#kontak">Kontak</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Profile Desa</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="{{route('berita.show')}}">Berita</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Kegiatan</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="{{route('register')}}">Register</a>
-                <a href="{{route('login')}}">
-                    <button type="button" class="rounded bg-teal-800 px-6 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-lime-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Login
-                    </button>
-                </a>
             </div>
         </div>
     </div>
