@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire\User;
+namespace App\Livewire\Berita;
 
 use Livewire\Component;
-use App\Models\User;
+use App\Models\Berita;
 use Livewire\WithPagination;
 
 class Approval extends Component
@@ -17,26 +17,25 @@ class Approval extends Component
     }
 
     public function Approve($id){
-        $user = User::findOrFail($id);
-        $user->status= "Verified";
-        $user->save();
+        $berita = Berita::findOrFail($id);
+        $berita->status= "Verified";
+        $berita->save();
 
         return redirect(request()->header('Referer'));
     }
 
     public function Reject($id){
-        $user = User::findOrFail($id);
-        $user->status= "Rejected";
-        $user->save();
+        $berita = Berita::findOrFail($id);
+        $berita->status= "Rejected";
+        $berita->save();
 
         return redirect(request()->header('Referer'));
     }
 
     public function render()
     {
-        $dataUser = User::where('status','NA')->where('role','Pengguna')->paginate(10);
+        $berita = Berita::where('status','Menunggu Approval')->with('user')->paginate(10);
 
-        return view('livewire.user.approval', compact('dataUser'));
+        return view('livewire.berita.approval', compact('berita'));
     }
 }
-

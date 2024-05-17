@@ -1,42 +1,42 @@
 <?php
 
-namespace App\Livewire\User;
+namespace App\Livewire\Layanan;
 
 use Livewire\Component;
-use App\Models\User;
+use App\Models\Layanan;
+use App\Models\imageKegiatan;
 use Livewire\WithPagination;
 
 class Approval extends Component
 {
     use WithPagination;
 
-    public function mount(){
+    public function mount()
+    {
         if (!(auth()->user()->role == 'Admin' || auth()->user()->role == 'Pengurus Desa')) {
             abort(403, 'Kamu bukan Admin atau Pengurus Desa!');
         }
     }
 
     public function Approve($id){
-        $user = User::findOrFail($id);
-        $user->status= "Verified";
-        $user->save();
+        $layanan = Layanan::findOrFail($id);
+        $layanan->status= "Verified";
+        $layanan->save();
 
         return redirect(request()->header('Referer'));
     }
 
     public function Reject($id){
-        $user = User::findOrFail($id);
-        $user->status= "Rejected";
-        $user->save();
+        $layanan = Layanan::findOrFail($id);
+        $layanan->status= "Rejected";
+        $layanan->save();
 
         return redirect(request()->header('Referer'));
     }
 
     public function render()
     {
-        $dataUser = User::where('status','NA')->where('role','Pengguna')->paginate(10);
-
-        return view('livewire.user.approval', compact('dataUser'));
+        $layanans = Layanan::with('user')->where('status','Menunggu Verifikasi')->paginate(10);
+        return view('livewire.layanan.approval', compact('layanans'));
     }
 }
-

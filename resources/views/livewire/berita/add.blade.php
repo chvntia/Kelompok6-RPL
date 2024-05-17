@@ -38,10 +38,18 @@
         </div>
         <div class="mb-4">
             <label for="image" class="block text-gray-700 font-bold mb-2">Image URL</label>
+<<<<<<< HEAD
             <input type="file" id="image" name="image" wire:model="image" class="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" placeholder="Enter the image URL">
+=======
+            <input type="file" id="image" name="image" wire:model="image" class="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" placeholder="Insert the image">
+>>>>>>> 63adbffeb3da7739f5b8700c942748a45f4f0ad9
         </div>
         <div class="flex justify-end">
             <button type="button" wire:click="addBerita" data-confirm-delete class="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded">Submit</button>
         </div>
     </form>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 63adbffeb3da7739f5b8700c942748a45f4f0ad9
