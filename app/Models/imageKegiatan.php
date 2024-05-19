@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Desa extends Model
+class imageKegiatan extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'kegiatan',
-        'deskripsi',
-        'status',
+        'desa_id',
+        'path_image_kegiatan'
     ];
 
-    public function kegiatanImages()
+    public function desa()
     {
-        return $this->hasMany(imageKegiatan::class);
+        return $this->belongsTo(Desa::class);
     }
 }
