@@ -280,8 +280,9 @@
                                 <span class="lg:block">Chyntia Oktavia Zulkifli</span>
                                 <span class="lg:block">Sarnia Humaira Thamrin</span>
                                 <span class="lg:block">Cynthia Ayu Prayuning</span>
+                                <span class="lg:block">Dimas Jaya Kusuma</span>
                                 <span class="lg:block">Christian Abilene</span>
-                                <span class="lg:block">M Irfan Naufal</span>
+                                <span class="lg:block">M Irfan Naufal Fadhil</span>
                                 <span class="lg:block">Fairuz Ichsan</span>
                             </li>
                         </ul>

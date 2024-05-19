@@ -16,6 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @if (Auth::user()->role == 'Admin' || Auth::user()->role == 'Pengurus Desa')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.index')">
                         {{ __('Add User') }}
@@ -34,6 +35,17 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('berita.approval') }}" :active="request()->routeIs('berita.approval')">
                         {{ __('Approval Berita') }}
+                    </x-nav-link>
+                </div>
+                @endif
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('desa.kegiatan') }}" :active="request()->routeIs('desa.kegiatan')">
+                        {{ __('Add Kegiatan') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('desa.approval') }}" :active="request()->routeIs('desa.approval')">
+                        {{ __('Approval Kegiatan') }}
                     </x-nav-link>
                 </div>
             </div>
