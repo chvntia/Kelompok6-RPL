@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Berita;
 
+use App\Http\Livewire\Kategori;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Berita;
@@ -15,7 +16,7 @@ class Add extends Component
     public $id;
     public $judul;
     public $deskripsi;
-    public $kategori;
+    public $kategoris;
     public $isi;
     public $link;
     public $image;
@@ -32,6 +33,7 @@ class Add extends Component
         } else if (auth()->user()->status == 'Rejected' && auth()->user()->role == 'Pengguna'){
             abort(403, 'Status Pengguna Rejected!');
         }
+        
     }
 
     public function addBerita(){
