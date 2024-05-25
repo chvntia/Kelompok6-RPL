@@ -1,4 +1,4 @@
-<header class="z-10 py-2 bg-lime-50 border-b">
+<header class="z-10 py-2 bg-lime-100 border-b">
     <div class="container flex justify-between items-center px-6 mx-auto h-full text-purple-600 md:justify-end">
         <!-- Mobile hamburger -->
         <button class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple" @click="toggleSideMenu" aria-label="Menu">
@@ -15,7 +15,7 @@
                 aria-label="Account" 
                 aria-haspopup="true"
                 >
-                <span class="font-semibold text-cyan-500 text-sm ml-4">{{ Auth::user()->name }}</span>
+                <span class="font-semibold text-lime-600 text-sm ml-4"> <span class="text-lime-800">Selamat Datang! </span>{{ Auth::user()->name }}</span>
                 </button>
             </x-slot>
 
