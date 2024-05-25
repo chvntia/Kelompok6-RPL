@@ -1,26 +1,21 @@
 <?php
 
-namespace App\Livewire\Berita;
+namespace App\Livewire\Desa;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Berita;
+use App\Models\Desa;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
-class Add extends Component
+class Kegiatan extends Component
 {
     use WithFileUploads;
     use LivewireAlert;
 
-    public $id;
-    public $judul;
+    public $kegiatan;
     public $deskripsi;
-    public $kategori;
-    public $isi;
-    public $link;
-    public $image;
+    public $images = [];
     public $path_image;
-
 
     protected $listeners = [
         'confirmed'
@@ -34,24 +29,14 @@ class Add extends Component
         }
     }
 
-    public function addBerita(){
+    public function addKegiatan(){
         $this->validate([
-            'judul' => 'required|string',
+            'kegiatan' => 'required|string',
             'deskripsi' => 'required|string',
-            'kategori' => 'required',
-            'isi' => 'required',
-            'link' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg',
         ]);
 
-        
-        if ($this->image->isValid()) {
-            $this->path_image = $this->image->store('image_berita','public');
-        } else {
-            return redirect()->back()->with('error', 'Image Error!');
-        }
-
-        $this->alert('info', 'Add Berita', [
+        $this->alert('info', 'Add Kegiatan', [
             'position' => 'center',
             'timer' => '',
             'toast' => true,
@@ -60,27 +45,30 @@ class Add extends Component
             'showCancelButton' => true,
             'onDismissed' => '',
             'confirmButtonText' => 'Yes',
-            'text' => 'Are you sure to add Berita '.$this->judul.'?',
+            'text' => 'Are you sure to add Berita '.$this->kegiatan.'?',
             'cancelButtonText' => 'Cancel',
             'width' => '480',
             'height' => '480',
         ]);
-
     }
 
     public function confirmed(){
-        Berita::create([
-            'user_id' => $this->id,
-            'judul' => $this->judul,
+        $desa = Desa::create([
+            'kegiatan' => $this->kegiatan,
             'deskripsi' => $this->deskripsi,
-            'kategori' => $this->kategori,
-            'isi' => $this->isi,
-            'link' => $this->link,
             'status' => 'Menunggu Approval',
-            'path_image_berita' => $this->path_image
         ]);
 
-        $this->flash('success', 'Berita ' . $this->judul . ' Added!', [
+        foreach ($this->images as $image){
+            if ($image->isValid()) {
+                $path_image = $image->store('image_kegiatan','public');
+                $desa->kegiatanImages()->create(['path_image_kegiatan' => $path_image]);
+            } else {
+                return redirect()->back()->with('error', 'Image Error!');
+            }
+        }
+
+        $this->flash('success', 'Kegiatan ' . $this->kegiatan . ' Added!', [
             'position' => 'center',
             'timer' => '3000',
             'toast' => false,
@@ -94,6 +82,6 @@ class Add extends Component
 
     public function render()
     {
-        return view('livewire.berita.add');
+        return view('livewire.desa.kegiatan');
     }
 }

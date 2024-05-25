@@ -8,15 +8,10 @@
             </div>
             <div class="flex-col items-center text-sm gap-12 text-sm font-semibold text-lime-800 md:flex md:flex-row lg:p-0 md:mt-0">
                 <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="/">Beranda</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Profile Desa</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="{{route('berita.show')}}">Berita</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#_">Kegiatan</a>
-                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="{{route('register')}}">Register</a>
-                <a href="{{route('login')}}">
-                    <button type="button" class="rounded bg-teal-800 px-6 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-lime-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Login
-                    </button>
-                </a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#profile_desa">Profile Desa</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#lokasi">Lokasi</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#fasilitas">Fasilitas</a>
+                <a class="hover:text-lime-500 focus:outline-none focus:text-gray-500 md:ml-auto" href="#kontak">Kontak</a>
             </div>
         </div>
     </div>

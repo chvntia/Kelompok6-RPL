@@ -35,7 +35,6 @@ class Approval extends Component
     public function render()
     {
         $berita = Berita::where('status','Menunggu Approval')->with('user')->paginate(10);
-
         return view('livewire.berita.approval', compact('berita'));
     }
 }

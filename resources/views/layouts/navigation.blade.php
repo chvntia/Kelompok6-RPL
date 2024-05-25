@@ -1,45 +1,73 @@
-<aside class="z-20 hidden w-64 overflow-y-auto bg-white md:block flex-shrink-0 border bg-lime-50">
-    <div class="py-4 font-bold">
-        <a class="ml-6 text-lg font-bold" href="{{ route('dashboard') }}">
-            Selamat Datang!
-        </a>
+<aside class="z-20 hidden w-64 overflow-y-auto bg-white md:block flex-shrink-0 border">
+     <div class="py-4">
+         <a class="ml-6 text-lg font-bold" href="{{ route('dashboard') }}">
+             Selamat Datang!
+         </a>
 
-        <ul class="mt-6">
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('dashboard') ? 'bg-lime-200 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('dashboard') }}">
-                    {{ __('Dashboard') }}
-                </x-nav-link>
-            </li>
+         <ul class="mt-6">
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('dashboard') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('dashboard') }}">
+                     {{ __('Dashboard') }}
+                 </x-nav-link>
+             </li>
 
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.index') ? 'bg-lime-100 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('user.index') }}">
-                    {{ __('Tambah Pengguna') }}
-                </x-nav-link>
-            </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.index') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('user.index') }}">
+                     {{ __('Tambah Pengguna') }}
+                 </x-nav-link>
+             </li>
 
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.approval') ? 'bg-lime-100 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('user.approval') }}">
-                    {{ __('Approval Pengguna') }}
-                </x-nav-link>
-            </li>
-            
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.approval') ? 'bg-lime-100 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('berita.show') }}">
-                    {{ __('Berita') }}
-                </x-nav-link>
-            </li>
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.approval') ? 'bg-lime-100 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('berita.add') }}">
-                    {{ __('Add Berita') }}
-                </x-nav-link>
-            </li>   
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.approval') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('user.approval') }}">
+                     {{ __('Approval Pengguna') }}
+                 </x-nav-link>
+             </li>
 
-            
-            <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('user.approval') ? 'bg-lime-100 rounded-md' : '' }}">
-                <x-nav-link href="{{ route('berita.approval') }}">
-                    {{ __('Berita Approval') }}
-                </x-nav-link>
-            </li>  
-        </ul>
-    </div>
-</aside>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('berita.show') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('berita.show') }}">
+                     {{ __('Berita') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('berita.add') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('berita.add') }}">
+                     {{ __('Add Berita') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('berita.approval') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('berita.approval') }}">
+                     {{ __('Approval Berita') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('desa.show') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('desa.show') }}" :active="request()->routeIs('desa.show')">
+                     {{ __('Kegiatan') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('desa.kegiatan') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('desa.kegiatan') }}" :active="request()->routeIs('desa.kegiatan')">
+                     {{ __('Add Kegiatan') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('desa.approval') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('desa.approval') }}" :active="request()->routeIs('desa.approval')">
+                     {{ __('Approval Kegiatan') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('layanan.add') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('layanan.add') }}" :active="request()->routeIs('layanan.add')">
+                     {{ __('Request Layanan') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('layanan.approval') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('layanan.approval') }}" :active="request()->routeIs('layanan.approval')">
+                     {{ __('Approval Layanan') }}
+                 </x-nav-link>
+             </li>
+             <li class="relative px-6 py-3 rounded-md transition duration-300 ease-in-out hover:bg-lime-200 {{ request()->routeIs('layanan.show') ? 'bg-lime-200 rounded-md' : '' }}">
+                 <x-nav-link href="{{ route('layanan.show') }}" :active="request()->routeIs('layanan.show')">
+                     {{ __('Layanan') }}
+                 </x-nav-link>
+             </li>
+         </ul>
+     </div>
+ </aside>
