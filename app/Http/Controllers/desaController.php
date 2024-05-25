@@ -7,7 +7,18 @@ use Illuminate\Http\Request;
 
 class desaController extends Controller
 {
-    public function data(){
-        return view('desa.data');
+    public function kegiatan()
+    {
+        return view('desa.kegiatan');
+    }
+
+    public function approval()
+    {
+        return view('desa.approval');
+    }
+
+    public function show()
+    {
+        return view('desa.show');
     }
 }
