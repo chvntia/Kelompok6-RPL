@@ -81,7 +81,6 @@ class Show extends Component
     {
         $imageKegiatans = imageKegiatan::all();
         $desas = Desa::where('status', 'Verified')->paginate(10);
-
         return view('livewire.desa.show', compact('desas', 'imageKegiatans'));
     }
 }
