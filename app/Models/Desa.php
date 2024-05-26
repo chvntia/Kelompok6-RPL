@@ -10,14 +10,13 @@ class Desa extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama',
+        'kegiatan',
         'deskripsi',
-        'kontak',
-        'alamat',
-        'sejarah',
-        'visi',
-        'misi',
-        'struktur_organisasi',
-        'fasilitas_desa',
+        'status',
     ];
+
+    public function kegiatanImages()
+    {
+        return $this->hasMany(imageKegiatan::class);
+    }
 }

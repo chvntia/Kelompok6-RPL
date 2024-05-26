@@ -11,8 +11,8 @@ class Approval extends Component
     use WithPagination;
 
     public function mount(){
-        if (!(auth()->user()->role == 'Admin')) {
-            abort(403, 'Kamu bukan Admin!');
+        if (!(auth()->user()->role == 'Admin' || auth()->user()->role == 'Pengurus Desa')) {
+            abort(403, 'Kamu bukan Admin atau Pengurus Desa!');
         }
     }
 
@@ -39,3 +39,4 @@ class Approval extends Component
         return view('livewire.user.approval', compact('dataUser'));
     }
 }
+
