@@ -2,10 +2,10 @@
 
 namespace App\Livewire\Berita;
 
-use App\Http\Livewire\Kategori;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Berita;
+use App\Models\Kategori;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Add extends Component
@@ -16,12 +16,11 @@ class Add extends Component
     public $id;
     public $judul;
     public $deskripsi;
-    public $kategoris;
+    public $kategori;
     public $isi;
     public $link;
     public $image;
     public $path_image;
-    public $kategori;
 
 
     protected $listeners = [
@@ -34,7 +33,6 @@ class Add extends Component
         } else if (auth()->user()->status == 'Rejected' && auth()->user()->role == 'Pengguna'){
             abort(403, 'Status Pengguna Rejected!');
         }
-        
     }
 
     public function addBerita(){
@@ -68,7 +66,6 @@ class Add extends Component
             'width' => '480',
             'height' => '480',
         ]);
-
     }
 
     public function confirmed(){
@@ -96,7 +93,7 @@ class Add extends Component
     }
 
     public function render()
-    {
-        return view('livewire.berita.add');
+    {   $kategoris = Kategori::all();
+        return view('livewire.berita.add', compact('kategoris'));
     }
 }
