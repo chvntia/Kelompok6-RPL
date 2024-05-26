@@ -5,6 +5,7 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\beritaController;
 use App\Http\Controllers\desaController;
 use App\Http\Controllers\layananController;
+use App\Http\Controllers\kategoriController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,5 +31,6 @@ Route::middleware([
     Route::get('/layanan/add',[layananController::class, 'add'])->name('layanan.add');
     Route::get('/layanan/approval',[layananController::class, 'approval'])->name('layanan.approval');
     Route::get('/layanan/show',[layananController::class, 'show'])->name('layanan.show');
-    
+    Route::get('/kategori-berita/add',[kategoriController::class, 'add'])->name('kategori.add');
+    Route::get('/kategori-berita/update/{id}',[kategoriController::class, 'update'])->name('kategori.update');
 });
