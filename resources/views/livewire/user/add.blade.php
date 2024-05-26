@@ -1,7 +1,7 @@
 <div class="p-4 mt-4 bg-white rounded-lg shadow-xs border">
-    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs border bg-teal-50">
+    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
         <div class="flex flex-col md:flex-row sm:flex-col sm:gap-10">
-            <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2 mx-auto border rounded-lg shadow">
                 <div class="w-full">
                     <h1 class="mb-4 text-xl font-semibold text-gray-700">
                         Daftarkan Pengguna

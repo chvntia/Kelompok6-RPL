@@ -369,8 +369,8 @@ class ComposerStaticInitab04628ac9994c0f42682cfafc804953
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -583,11 +583,18 @@ class ComposerStaticInitab04628ac9994c0f42682cfafc804953
         'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Actions\\Jetstream\\DeleteUser' => __DIR__ . '/../..' . '/app/Actions/Jetstream/DeleteUser.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\beritaController' => __DIR__ . '/../..' . '/app/Http/Controllers/beritaController.php',
         'App\\Http\\Controllers\\desaController' => __DIR__ . '/../..' . '/app/Http/Controllers/desaController.php',
         'App\\Http\\Controllers\\userController' => __DIR__ . '/../..' . '/app/Http/Controllers/userController.php',
+        'App\\Livewire\\Berita\\Approval' => __DIR__ . '/../..' . '/app/Livewire/Berita/Approval.php',
+        'App\\Livewire\\Berita\\Show' => __DIR__ . '/../..' . '/app/Livewire/Berita/Show.php',
         'App\\Livewire\\Desa\\Data' => __DIR__ . '/../..' . '/app/Livewire/Desa/Data.php',
+        'App\\Livewire\\Layanan\\Add' => __DIR__ . '/../..' . '/app/Livewire/Layanan/Add.php',
+        'App\\Livewire\\Layanan\\Approval' => __DIR__ . '/../..' . '/app/Livewire/Layanan/Approval.php',
+        'App\\Livewire\\Layanan\\Show' => __DIR__ . '/../..' . '/app/Livewire/Layanan/Show.php',
         'App\\Livewire\\User\\Add' => __DIR__ . '/../..' . '/app/Livewire/User/Add.php',
         'App\\Livewire\\User\\Approval' => __DIR__ . '/../..' . '/app/Livewire/User/Approval.php',
+        'App\\Models\\Berita' => __DIR__ . '/../..' . '/app/Models/Berita.php',
         'App\\Models\\Desa' => __DIR__ . '/../..' . '/app/Models/Desa.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
