@@ -55,8 +55,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('') ? 'bg-lime-100 rounded-md' : '' }}">
-                            <a href="">
+                        <li class="{{ request()->routeIs('kategori.add') ? 'bg-lime-100 rounded-md' : '' }}">
+                            <a href="{{ route('kategori.add') }}">
                                 <span class="inline-flex items-center w-full text-sm font-semibold">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                                     <span class="ml-4 text-gray-800">Tambah Kategori</span>

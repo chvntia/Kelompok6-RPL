@@ -44,4 +44,3 @@
             <button type="button" wire:click="addBerita" data-confirm-delete class="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded">Submit</button>
         </div>
     </form>
-</div>
