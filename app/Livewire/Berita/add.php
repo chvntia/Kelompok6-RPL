@@ -21,6 +21,7 @@ class Add extends Component
     public $link;
     public $image;
     public $path_image;
+    public $kategori;
 
 
     protected $listeners = [
