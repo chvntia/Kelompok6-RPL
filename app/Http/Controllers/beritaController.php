@@ -19,4 +19,8 @@ class beritaController extends Controller
     {
         return view('berita.show');
     }
+    public function update($id)
+    {
+        return view('berita.update',compact('id'));
+    }
 }

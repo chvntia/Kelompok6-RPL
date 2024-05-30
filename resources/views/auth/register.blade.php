@@ -2,9 +2,9 @@
 <x-guest-layout>
     <div class="flex flex-col md:flex-row sm:flex-col sm:gap-10">
         <div class="md:h-auto md:w-1/2 shadow-2xl rounded-xl sm:shadow-md flex items-center justify-center h-screen bg-lime-50">
-            <img class="w-100 h-100 object-cover" src="{{ asset('images/logo.jpg') }}" alt="" />     
+            <img class="w-100 h-100 object-cover" src="{{ asset('images/logo.jpg') }}" alt="" />
         </div>
-        
+
         <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
             <div class="w-full">
                 <h1 class="mb-4 text-xl font-semibold text-gray-700">
@@ -18,36 +18,54 @@
                     <div class="">
                         <x-label for="name" value="{{ __('Name') }}" />
                         <x-input id="name" class="block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                        @error('name')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <!-- Email -->
                     <div class="">
                         <x-label for="email" value="{{ __('Email') }}" />
                         <x-input id="email" class="block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                        @error('email')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
-                    
+
                     <!-- Phone Number -->
                     <div class="">
                         <x-label for="no_hp" value="{{ __('No Handphone') }}" />
                         <x-input id="no_hp" class="border p-2 block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="phone" name="no_hp" :value="old('no_hp')" required autocomplete="no_hp" />
+                        @error('no_hp')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
-                    
+
                     <!-- Address -->
                     <div class="">
                         <x-label for="alamat" value="{{ __('Alamat') }}" />
                         <x-input id="alamat" class="border p-2 block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="alamat" name="alamat" :value="old('alamat')" required autocomplete="alamat" />
+                        @error('alamat')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <!-- Password -->
                     <div class="">
                         <x-label for="password" value="{{ __('Password') }}" />
                         <x-input id="password" class="block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="password" name="password" required autocomplete="new-password" />
+                        @error('password')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="">
                         <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                         <x-input id="password_confirmation" class="block mt-1 w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300" type="password" name="password_confirmation" required autocomplete="new-password" />
+                        @error('password_confirmation')
+                        <div class="text-sm text-red-600">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <!-- Register Button -->

@@ -13,15 +13,9 @@ return new class extends Migration
     {
         Schema::create('desas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('kegiatan');
             $table->string('deskripsi');
-            $table->string('kontak');
-            $table->string('alamat');
-            $table->string('sejarah');
-            $table->string('visi');
-            $table->string('misi');
-            $table->string('struktur_organisasi');
-            $table->string('fasilitas_desa');
+            $table->string('status');
             $table->timestamps();
         });
     }
